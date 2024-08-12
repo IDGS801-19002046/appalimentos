@@ -132,19 +132,17 @@ Future<Color> assignColorHost(int status) async {
 Future<Icon> assignIconHost(int status) async {
   switch (status) {
     case 1:
-      return const Icon(Icons.table_bar, size: 30, color: Colors.white);
+      return const Icon(Icons.table_restaurant, size: 30, color: Colors.white);
     case 2:
-      return const Icon(Icons.people_alt_rounded,
-          size: 30, color: Colors.white);
+      return const Icon(Icons.family_restroom, size: 30, color: Colors.white);
     case 3:
-      return const Icon(Icons.dinner_dining, size: 30, color: Colors.white);
+      return const Icon(Icons.fastfood, size: 30, color: Colors.white);
     case 4:
-      return const Icon(Icons.monetization_on, size: 30, color: Colors.white);
+      return const Icon(Icons.attach_money, size: 30, color: Colors.white);
     case 5:
-      return const Icon(Icons.cleaning_services_outlined,
-          size: 30, color: Colors.white);
+      return const Icon(Icons.clean_hands, size: 30, color: Colors.white);
     default:
-      return const Icon(Icons.table_bar, size: 30, color: Colors.white);
+      return const Icon(Icons.table_restaurant, size: 30, color: Colors.white);
   }
 }
 
@@ -156,7 +154,6 @@ Future<bool> getTablesCleaning(int idClean, int idTable) async {
     QuerySnapshot result = await tablesCol
         .where('id_clean', isEqualTo: idClean)
         .where('id_table', isEqualTo: idTable)
-        .orderBy('id_table')
         .get();
 
     if (result.docs.isNotEmpty) {
@@ -198,23 +195,23 @@ Future<Icon> assignIcon(int status, int idTable, idClean) async {
   if (isClean) {
     switch (status) {
       case 1:
-        return const Icon(Icons.table_bar, size: 30, color: Colors.white);
+        return const Icon(Icons.table_restaurant,
+            size: 30, color: Colors.white);
       case 2:
-        return const Icon(Icons.people_alt_rounded,
-            size: 30, color: Colors.white);
+        return const Icon(Icons.family_restroom, size: 30, color: Colors.white);
       case 3:
-        return const Icon(Icons.dinner_dining, size: 30, color: Colors.white);
+        return const Icon(Icons.fastfood, size: 30, color: Colors.white);
       case 4:
-        return const Icon(Icons.monetization_on, size: 30, color: Colors.white);
+        return const Icon(Icons.attach_money, size: 30, color: Colors.white);
       case 5:
-        return const Icon(Icons.cleaning_services_outlined,
-            size: 30, color: Colors.white);
+        return const Icon(Icons.clean_hands, size: 30, color: Colors.white);
       default:
-        return const Icon(Icons.table_bar, size: 30, color: Colors.white);
+        return const Icon(Icons.table_restaurant,
+            size: 30, color: Colors.white);
     }
   } else {
     return const Icon(
-      Icons.cancel_sharp,
+      Icons.cancel_outlined,
       size: 30,
       color: Colors.white70,
     );
@@ -229,7 +226,6 @@ Future<bool> getTablesWaiter(int idClean, int idTable) async {
     QuerySnapshot result = await tablesCol
         .where('id_waiter', isEqualTo: idClean)
         .where('id_table', isEqualTo: idTable)
-        .orderBy('id_table')
         .get();
 
     if (result.docs.isNotEmpty) {
@@ -244,6 +240,8 @@ Future<bool> getTablesWaiter(int idClean, int idTable) async {
 
 Future<Color> assignColorWaiter(int status, int idTable, int idWaiter) async {
   bool isWaiter = await getTablesWaiter(idWaiter, idTable);
+  print(status);
+  print(isWaiter);
 
   if (isWaiter) {
     switch (status) {
@@ -271,23 +269,23 @@ Future<Icon> assignIconWaiter(int status, int idTable, idWaiter) async {
   if (isWaiter) {
     switch (status) {
       case 1:
-        return const Icon(Icons.table_bar, size: 30, color: Colors.white);
+        return const Icon(Icons.table_restaurant,
+            size: 30, color: Colors.white);
       case 2:
-        return const Icon(Icons.people_alt_rounded,
-            size: 30, color: Colors.white);
+        return const Icon(Icons.family_restroom, size: 30, color: Colors.white);
       case 3:
-        return const Icon(Icons.dinner_dining, size: 30, color: Colors.white);
+        return const Icon(Icons.fastfood, size: 30, color: Colors.white);
       case 4:
-        return const Icon(Icons.monetization_on, size: 30, color: Colors.white);
+        return const Icon(Icons.attach_money, size: 30, color: Colors.white);
       case 5:
-        return const Icon(Icons.cleaning_services_outlined,
-            size: 30, color: Colors.white);
+        return const Icon(Icons.clean_hands, size: 30, color: Colors.white);
       default:
-        return const Icon(Icons.table_bar, size: 30, color: Colors.white);
+        return const Icon(Icons.table_restaurant,
+            size: 30, color: Colors.white);
     }
   } else {
     return const Icon(
-      Icons.cancel_sharp,
+      Icons.cancel_outlined,
       size: 30,
       color: Colors.white70,
     );

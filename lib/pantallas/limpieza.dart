@@ -98,8 +98,8 @@ class _CleaningPageState extends State<CleaningPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: const Text('Finalizar la limpieza de la mesa'),
-              content: const Text('Si presionas finalizar la mesa estra libre'),
+              title: const Text('Terminar la limpieza de la mesa'),
+              content: const Text('Al dar click la mesa esta disponible'),
               actions: [
                 ElevatedButton(
                   onPressed: () {
@@ -123,7 +123,7 @@ class _CleaningPageState extends State<CleaningPage> {
       } else {
         service.showInfoDialog(
             context,
-            const Text('Mesa no necesita limpieza',
+            const Text('La mesa no necesita limpieza',
                 style: TextStyle(color: Colors.white)),
             const Text('Esta mesa esta aun no necesita limpieza',
                 style: TextStyle(color: Colors.white)),

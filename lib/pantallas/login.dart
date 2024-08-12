@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: TextField(
                     style: TextStyle(color: Colors.pink.shade200),
                     controller: _userController,
-                    cursorColor: Colors.pink, // Cursor color
+                    cursorColor: Colors.pink,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),

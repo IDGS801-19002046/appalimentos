@@ -118,7 +118,8 @@ class _KitchenPageState extends State<KitchenPage> {
                 itemBuilder: (context, index) {
                   var item = _orders[index];
                   return ListTile(
-                    leading: const Icon(Icons.label),
+                    leading:
+                        const Icon(Icons.circle, size: 10, color: Colors.pink),
                     title: Text('${item['food']}'),
                     subtitle: Text(
                       'Opción: ${item['opcion']} Cantidad:  ${item['cantidad']}',
@@ -151,7 +152,7 @@ class _KitchenPageState extends State<KitchenPage> {
     } else {
       service.showInfoDialog(
           context,
-          const Text('Esta mesa no ha realizado ningun pedido',
+          const Text('Esta mesa aún no ha ordenado',
               style: TextStyle(color: Colors.white)),
           const Text('Esta mesa esta en otro estatus intenta en otro momento',
               style: TextStyle(color: Colors.white)),

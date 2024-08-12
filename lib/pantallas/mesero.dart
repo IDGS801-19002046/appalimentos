@@ -109,7 +109,8 @@ class _WaiterPageState extends State<WaiterPage> {
                   itemBuilder: (context, index) {
                     var item = _menu[index];
                     return ListTile(
-                      leading: const Icon(Icons.label),
+                      leading: const Icon(Icons.circle,
+                          size: 10, color: Colors.pink),
                       title: Text('${item['nombre']}  ${item['precio']} MXN'),
                       subtitle: Text(
                         '${item['descripcion']} Opciones: ${item['opciones']}',
@@ -136,20 +137,19 @@ class _WaiterPageState extends State<WaiterPage> {
       } else {
         service.showInfoDialog(
             context,
-            const Text('Mesa no disponible para tomar pedido',
+            const Text('Mesa no disponible',
                 style: TextStyle(color: Colors.white)),
             const Text(
-                'Esta mesa esta en un proceso diferente al que intentas realizar',
+                'La mesa esta en otro estatus intenta de nuevo en otro momento',
                 style: TextStyle(color: Colors.white)),
             Colors.pink.shade400);
       }
     } else {
       service.showInfoDialog(
           context,
-          const Text('Esta mesa no la tienes asignada',
+          const Text('Esta mesa no asignada',
               style: TextStyle(color: Colors.white)),
-          const Text(
-              'Esta mesa esta asignada a uno de tus compañeros y no puedes visualizar sus acciones',
+          const Text('La mesa esta asignada a otro compañero',
               style: TextStyle(color: Colors.white)),
           Colors.pink.shade400);
     }
