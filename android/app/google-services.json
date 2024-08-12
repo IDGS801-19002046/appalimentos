@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "241307564084",
+    "project_id": "appalimentos-933c7",
+    "storage_bucket": "appalimentos-933c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241307564084:android:aea60106f5a0d1d0623261",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgWGVhAmtey0m_xAX6cb9hef99SKPIFSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
